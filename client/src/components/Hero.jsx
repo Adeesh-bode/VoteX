@@ -1,19 +1,23 @@
 import React from 'react';
 import '../index.css';
 import { motion } from 'framer-motion';
-import { container, item } from '../utils/animation';
+import { container, item , up } from '../utils/animation';
 import imageData from '../data/imageData';
+
+// import { up } from '../utils/animation';
 
 const Hero = () => {
   return (
-    <div className='bg h-screen flex flex-col justify-between px-72 pt-20'>
-        <div className='w-full flex flex-col gap-5 justify-between items-start '>
-            <div className='text-6xl'>VoteX</div>
-            <div className='text-base'>Coz</div>
-            <div className='text-3xl'>Your Anonymity, Our Promise</div>
-        </div>
+    <div className='bg h-screen flex flex-col justify-between px-[360px] pt-20 '>
+        <motion.div variants={container} className='w-full flex flex-col gap-5 justify-between items-start '>
+            {/* <AnimatePresence> */}
+                <motion.div className='text-7xl' variants={up} initial='hidden' animate='visible'>VoteX</motion.div>
+                <motion.div className='text-3xl' variants={up} initial='hidden' animate='visible'>Coz</motion.div>
+                <motion.div className='text-5xl' variants={up} initial='hidden' animate='visible'>Your Anonymity, Our Promise</motion.div>
+            {/* </AnimatePresence> */}
+        </motion.div>
 
-        <motion.div className='h-1/2 flex justify-center items-end gap-3'
+        <motion.div className='h-1/2 flex justify-center items-end gap-12'
             variants={container}
             initial="hidden"
             animate="visible"

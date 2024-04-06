@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap') */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* outline: 2px solid red;    */
 }
-:webkit-scroll{
-  display:none;
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* .bg{
@@ -20,11 +23,10 @@
 
 } */
 
-/* .jockey-one-regular {
+.jockey-one-regular {
   font-family: "Jockey One", sans-serif;
   font-weight: 400;
   font-style: normal;
-} */
-
+} 
 
 

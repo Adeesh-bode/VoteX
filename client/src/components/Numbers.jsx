@@ -32,18 +32,18 @@ const Numbers = () => {
     }, []);
 
     return (
-        <div ref={counterSectionRef} className="flex justify-around py-10 bg-gray-100 text-gray-800">
-            <div className="text-center">
-                <div className="text-3xl font-semibold">{votes}k+</div>
-                <div className="text-lg font-medium">Votes</div>
+        <div ref={counterSectionRef} className=" h-[200px] md:h-[300px] flex flex-col md:flex-row justify-around items-center py-10 bg-gray-100 text-gray-800">
+            <div className="text-center flex flex-col jusitify-between items-center">
+                <div className="text-3xl font-semibold ">{votes}k+</div>
+                <div className="text-lg font-medium text-gray-500 text-2xl">Votes</div>
             </div>
-            <div className="text-center">
+            <div className="text-center flex flex-col jusitify-between items-center">
                 <div className="text-3xl font-semibold">{electionsConducted}k+</div>
-                <div className="text-lg font-medium">Elections Conducted</div>
+                <div className="text-lg font-medium text-gray-500 text-2xl">Elections Conducted</div>
             </div>
-            <div className="text-center">
+            <div className="text-center flex flex-col jusitify-between items-center ">
                 <div className="text-3xl font-semibold">{positiveReviews}+</div>
-                <div className="text-lg font-medium">Positive Reviews</div>
+                <div className="text-lg font-medium text-gray-500 text-2xl">Positive Reviews</div>
             </div>
         </div>
     );

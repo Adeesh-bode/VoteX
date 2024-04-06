@@ -19,3 +19,12 @@ export const container = {
     },
   };
   
+
+export const up = {
+  hidden: { y: 200, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1.5, yoyo: Infinity },
+  },
+};
