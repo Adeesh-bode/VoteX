@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MdAccountCircle, MdMenu, MdClose } from 'react-icons/md';
-import { navlinks } from '../data';
+import { navlinks } from '../data/data';
 
 // import { onAuthStateChanged } from 'firebase/auth';
 
