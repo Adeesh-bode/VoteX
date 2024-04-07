@@ -1,9 +1,6 @@
 import React from 'react';
 
 // import { GoHomeFill } from "react-icons/go";
-
-
-
 const FloatingIslandHeader = () => {
   return (
     // Adjust positioning to be fixed on the side, for example, the left side
@@ -16,7 +13,7 @@ const FloatingIslandHeader = () => {
       <nav>
         <ul className="flex flex-col space-y-4"> {/* Adjust space as needed */}
           <li><a href="#home" className="text-gray-800 hover:text-gray-600">Home</a></li>
-          <li><a href="#about" className="text-gray-800 hover:text-gray-600">About</a></li>
+          <li><a href="#about" className="text-gray-800 hover:text-gray-600">Vote</a></li>
           <li><a href="#services" className="text-gray-800 hover:text-gray-600">Services</a></li>
           <li><a href="#contact" className="text-gray-800 hover:text-gray-600">Contact</a></li>
         </ul>
