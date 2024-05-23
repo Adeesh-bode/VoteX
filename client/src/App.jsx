@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Vote from "./pages/vote";
+import Vote from "./pages/Vote";
 // import Header from "./components/Header";
 
 import './index.css'
