@@ -1,4 +1,4 @@
-export default vote = () =>{
+const Vote = () =>{
 
   return (
     <div>
@@ -6,3 +6,4 @@ export default vote = () =>{
     </div>
     )
 }
+export default Vote;
