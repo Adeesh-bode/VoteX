@@ -32,7 +32,7 @@ const Numbers = () => {
     }, []);
 
     return (
-        <div ref={counterSectionRef} className=" h-[200px] md:h-[300px] flex flex-col justify-around items-center md:flex-row md:justify-center   py-10 bg-gray-100 text-gray-800">
+        <div ref={counterSectionRef} className=" h-[200px] md:h-[300px] flex flex-col justify-around items-center md:flex-row md:justify-center  px-[50px] py-10 bg-gray-100 text-gray-800">
             <div className="text-center flex flex-col jusitify-between items-center">
                 <div className="text-3xl font-semibold ">{votes}k+</div>
                 <div className="text-lg font-medium text-gray-500 text-2xl">Votes</div>
