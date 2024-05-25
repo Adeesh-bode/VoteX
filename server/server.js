@@ -3,6 +3,8 @@ const app = express();
 const db = require('./db');
 require('dotenv').config();
 
+const mongoose = require('mongoose');
+
 const bodyParser = require('body-parser'); 
 app.use(bodyParser.json()); // req.body
 const PORT = process.env.PORT;
@@ -15,7 +17,17 @@ const candidateRoutes = require('./routes/candidateRoutes');
 app.use('/user', userRoutes);
 app.use('/candidate', candidateRoutes);
 
-
+mongoose
+    .connect(mongodbUrl,{
+        newUrlParser:true,
+        useUnifiedTopology:true,
+    })
+    .then(()=>{
+        console.log("Successfully connected:");
+    })
+    .catch((error)=>{
+        console.log("Some Error Occured:",error);
+    });
 app.listen(PORT, ()=>{
     console.log('listening on port ');
 })
