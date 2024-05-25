@@ -1,33 +1,31 @@
-const express = require('express')
-const app = express();
-const db = require('./db');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const mongoose = require('mongoose');
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-const bodyParser = require('body-parser'); 
-app.use(bodyParser.json()); // req.body
-const PORT = process.env.PORT;
-
-// Import the router files
 const userRoutes = require('./routes/userRoutes');
 const candidateRoutes = require('./routes/candidateRoutes');
 
-// Use the routers
+app.use(bodyParser.json());
+
 app.use('/user', userRoutes);
 app.use('/candidate', candidateRoutes);
 
 mongoose
-    .connect(process.env.mongodbUrl,{
-        newUrlParser:true,
-        useUnifiedTopology:true,
+    .connect(process.env.MONGODB_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
     })
-    .then(()=>{
-        console.log("Successfully connected:");
+    .then(() => {
+        console.log("Successfully connected to MongoDB");
     })
-    .catch((error)=>{
-        console.log("Some Error Occured:",error);
+    .catch((error) => {
+        console.error("Error connecting to MongoDB:", error);
     });
-app.listen(process.env.PORT, ()=>{
-    console.log('listening on port:',PORT);
-})
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);
+});
