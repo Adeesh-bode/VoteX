@@ -2,22 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
-  hidden: { opacity: 0, x: '-100vw' },
+  hidden: { opacity: 0, y: '-100vw' },
   visible: {
     opacity: 1,
-    x: 0,
-    transition: { type: 'spring', stiffness: 120, delay: 2. },
+    y: 0,
+    transition: { type: 'spring', stiffness: 70, delay: 0.5 },
   },
 };
 
 const itemVariants = {
-  hidden: { x: -10, opacity: 0 },
+  hidden: { opacity: 0, scale: 0.8 },
   visible: (custom) => ({
-    x: 0,
     opacity: 1,
+    scale: 1,
     transition: { delay: custom * 0.3, duration: 0.5 },
   }),
 };
+
+const problems = [
+  { id: 1, text: "Higher operational costs and extensive preparation times" },
+  { id: 2, text: "Limited accessibility and convenience for voters" },
+  { id: 3, text: "Increased potential for security risks and fraud concerns" },
+  { id: 4, text: "Offline voting excludes those away from home, curbing voter participation" },
+];
 
 const Problem = () => {
   return (
@@ -35,14 +42,20 @@ const Problem = () => {
         Offline Voting Hurdles
       </motion.h2>
       <motion.ul
-        className="list-inside space-y-4 flex flex-col justify-between items-center"
-        variants={itemVariants}
-        custom={2}
+        className=" space-y-4 flex flex-col justify-between items-center"
+        initial="hidden"
+        animate="visible"
       >
-        <motion.li variants={itemVariants} custom={2.5} className="text-lg text-gray-700">Limited accessibility and convenience for voters</motion.li>
-        <motion.li variants={itemVariants} custom={3} className="text-lg text-gray-700">Higher operational costs and extensive preparation times</motion.li>
-        <motion.li variants={itemVariants} custom={3.5} className="text-lg text-gray-700">Increased potential for security risks and fraud concerns</motion.li>
-        <motion.li variants={itemVariants} custom={3.5} className="text-lg text-gray-700">Offline voting excludes those away from home, curbing voter participation.</motion.li>
+        {problems.map((problem, index) => (
+          <motion.div
+            key={problem.id}
+            variants={itemVariants}
+            custom={index + 2}
+            className="text-lg text-gray-700 p-4 border rounded-lg bg-white shadow-md w-full max-w-lg"
+          >
+            {problem.text}
+          </motion.div>
+        ))}
       </motion.ul>
     </motion.div>
   );
