@@ -22,7 +22,7 @@ const FloatingIslandHeader = () => {
               href="#vote" 
               className="text-gray-800 hover:text-gray-600" 
               onClick={(e) => {
-                e.preventDefault();
+                e.preventDefault(); // prevents page from reloading... often happens with form events
                 navigate("/vote");
               }}
             >
