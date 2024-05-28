@@ -1,3 +1,4 @@
+// candidate schema made simple and anonimity preserved
 const voteSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
