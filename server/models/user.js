@@ -62,9 +62,10 @@ userSchema.pre('save', async function(next){
     }
 })
 
+// to match the stored password ( stored after hashing string ) and actual password 
 userSchema.methods.comparePassword = async function(candidatePassword){
     try{
-        // Use bcrypt to compare the provided password with the hashed password
+        // Use bcrypt function ".compare" to compare the provided password with the hashed password
         const isMatch = await bcrypt.compare(candidatePassword, this.password);
         return isMatch;
     }catch(err){
