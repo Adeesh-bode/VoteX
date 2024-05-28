@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-// const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt'); // for hashing content to be stored 
 
-// Define the Person schema
+// schema for politician 
 const candidateSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -19,7 +19,7 @@ const candidateSchema = new mongoose.Schema({
         {
             user: {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: 'User',
+                ref: 'User', // user mean people who have voted for it
                 required: true
             },
             votedAt: {
