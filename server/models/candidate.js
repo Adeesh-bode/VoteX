@@ -15,7 +15,7 @@ const candidateSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    votes: [
+    votes: [ // drawback of this schema tidious and candidate gets who have voted him..no anonimity
         {
             user: {
                 type: mongoose.Schema.Types.ObjectId,
