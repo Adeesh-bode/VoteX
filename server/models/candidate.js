@@ -44,6 +44,28 @@ module.exports = Candidate;
 // below is imprved candidateSchema as there can be many voter it is better to create a diiferent schema for votes
 
 
+const candidateSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    party: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: Number,
+        required: true
+    },
+    voteCount: {
+        type: Number,
+        default: 0
+    }
+});
+
+const Candidate = mongoose.model('Candidate', candidateSchema);
+
+
 
 
 
