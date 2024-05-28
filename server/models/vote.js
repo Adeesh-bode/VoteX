@@ -1,6 +1,6 @@
 // candidate schema made simple and anonimity preserved
 const voteSchema = new mongoose.Schema({
-    user: {
+    user: { // user identity is hashed so secure
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
