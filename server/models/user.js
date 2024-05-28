@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+// to keep user anonomous the name of user must be hashed in data base along with it address..and other details..
+
 // schema for people who are voting
 const userSchema = new mongoose.Schema({
     name: {
