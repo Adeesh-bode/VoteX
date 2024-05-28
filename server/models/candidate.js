@@ -42,7 +42,7 @@ module.exports = Candidate;
 
 
 // below is imprved candidateSchema as there can be many voter it is better to create a diiferent schema for votes
-
+// each time anyone votes only count will be increment 
 
 // const candidateSchema = new mongoose.Schema({
 //     name: {
