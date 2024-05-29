@@ -17,7 +17,7 @@ const checkAdminRole = async (userID) => {
     }
 }
 
-RESTful APIs (Representational State Transfer)
+// RESTful APIs (Representational State Transfer)
 
 // POST route to add a candidate
 router.post('/', jwtAuthMiddleware, async (req, res) =>{
