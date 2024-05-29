@@ -17,6 +17,8 @@ const checkAdminRole = async (userID) => {
     }
 }
 
+RESTful APIs 
+
 // POST route to add a candidate
 router.post('/', jwtAuthMiddleware, async (req, res) =>{
     try{
