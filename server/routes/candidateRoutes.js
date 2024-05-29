@@ -1,3 +1,4 @@
+// tested on postman
 const express = require('express');
 const router = express.Router(); // helps simplify routing at server/index file 
 const User = require('../models/user');
