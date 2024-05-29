@@ -131,7 +131,7 @@ router.get('/vote/count', async (req, res) => {
         // Find all candidates and sort them by voteCount in descending order
         const candidate = await Candidate.find().sort({voteCount: 'desc'});
 
-        // Map the candidates to only return their name and voteCount
+        // Map the candidates to only return their name and voteCount // for declaring results
         const voteRecord = candidate.map((data)=>{
             return {
                 party: data.party,
