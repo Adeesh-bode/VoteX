@@ -1,4 +1,5 @@
 // tested on postman
+// todo: controllers to be seperated
 const express = require('express');
 const router = express.Router();
 const User = require('./../models/user');
