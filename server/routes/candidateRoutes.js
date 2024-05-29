@@ -1,6 +1,6 @@
 // tested on postman
 // to do controllers to be seperated
-const express = require('express');
+const express = require('express'); web framework for Node.js
 const router = express.Router(); // helps simplify routing at server/index file 
 const User = require('../models/user');
 const {jwtAuthMiddleware, generateToken} = require('../jwt');
