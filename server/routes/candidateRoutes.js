@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); // helps simplify routing at server/index file 
 const User = require('../models/user');
 const {jwtAuthMiddleware, generateToken} = require('../jwt');
 const Candidate = require('../models/candidate');
