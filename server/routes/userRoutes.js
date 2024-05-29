@@ -112,7 +112,7 @@ router.put('/profile/password', jwtAuthMiddleware, async (req, res) => {
             return res.status(401).json({ error: 'Invalid current password' });
         }
 
-        // Update the user's password
+        // Update the normal user's password
         user.password = newPassword;
         await user.save();
 
