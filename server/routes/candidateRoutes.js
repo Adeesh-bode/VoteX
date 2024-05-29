@@ -1,4 +1,5 @@
 // tested on postman
+// to do controllers to be seperated
 const express = require('express');
 const router = express.Router(); // helps simplify routing at server/index file 
 const User = require('../models/user');
