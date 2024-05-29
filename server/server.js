@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-
 // dotenv is a popular npm package that loads environment variables from a .env file into process.env in Nodejs applications.
 
 const app = express();
