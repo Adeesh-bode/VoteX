@@ -1,11 +1,11 @@
 // config-server.js , schema in models , routing in routes , controller not seperated
-const express = require('express');
+const express = require('express'); // web framework for Node.js
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 // dotenv is a popular npm package that loads environment variables from a .env file into process.env in Nodejs applications.
 
-const app = express();
+const app = express(); 
 const PORT = process.env.PORT || 5000;
 
 const userRoutes = require('./routes/userRoutes');
