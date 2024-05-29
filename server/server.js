@@ -1,3 +1,4 @@
+// todo: make 3 roles in project , by auth admin  candidate , normal voter . Now only two
 // config-server.js , schema in models , routing in routes , controller not seperated
 const express = require('express'); // web framework for Node.js
 const mongoose = require('mongoose');
