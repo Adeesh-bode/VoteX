@@ -5,7 +5,7 @@ const router = express.Router();
 const User = require('./../models/user');
 const {jwtAuthMiddleware, generateToken} = require('./../jwt');
 
-RESTful APIs 
+ RESTful APIs (Representational State Transfer)
 
 // POST route to add a person
 router.post('/signup', async (req, res) =>{
