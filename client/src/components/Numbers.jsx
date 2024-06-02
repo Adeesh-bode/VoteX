@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import useCounter from '../utils/useCounter'; // Adjust the import path as necessary
 
 const Numbers = () => {
-    const counterSectionRef = useRef(null);
+    const counterSectionRef = useRef(null); useRef should be avoided as  it directly trigger html elements..can doesn't interact with virtual dom of react
     const [startCounting, setStartCounting] = useState(false);
 
     const votes = useCounter(0, 20, 3000, startCounting);
