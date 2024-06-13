@@ -22,6 +22,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/vote" element={<Vote />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
     </Router>
   );
