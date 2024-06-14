@@ -1,16 +1,13 @@
-// App.js
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import your components
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Vote from "./pages/Vote";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-// import Header from "./components/Header";
 
 import './index.css'
 function App() {
